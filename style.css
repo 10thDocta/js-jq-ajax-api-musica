@@ -26,23 +26,33 @@ header img {
   margin-top: 10px;
 }
 
-.cds-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 100px 0;
+.select-container {
+  margin-top: 30px;
+}
+
+.select-container h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: aliceblue;
 }
 
 .genre-selector {
   display: flex;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 #genre-select {
   margin: auto;
   padding: 10px;
   font-size: 16px;
+}
+
+.cds-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 100px 0;
 }
 
 .cd {
