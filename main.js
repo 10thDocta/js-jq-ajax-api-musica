@@ -23,12 +23,18 @@ $(document).ready(function () {
 	};
 
 
-	const render = object => {
+	const render = objectCD => {
 		const source = document.getElementById("cd-template").innerHTML;
 		const template = Handlebars.compile(source);
-		const html = template(object);
+		const html = template(objectCD);
 
 		$(".cds-container").append(html);
+
+		var genre = objectCD.genre;
+
+		if (!$("#genre-select option").text().includes(genre)) {
+			$("#genre-select").append(`<option value="${genre.toLowerCase()}">${genre}</option>`);
+		}
 	}
 
 	ajaxCall();
@@ -37,7 +43,6 @@ $(document).ready(function () {
 	$("#genre-select").change(function () {
 
 		const value = $(this).val();
-		console.log(value);
 
 		$(".cds-container .cd").filter(function () {
 
